@@ -8,21 +8,21 @@ Built with a mobile-first design and SaaS-ready architecture, SolarIntelli helps
 
 ## Live Demo
 
-🌍 [View SolarIntelli Live](https://your-deployed-url.com)
+[View SolarIntelli Live](https://your-deployed-url.com)
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 | Feature                     | Description                                                                 |
 |----------------------------|-----------------------------------------------------------------------------|
-| 💰 **Savings Calculator**   | Instantly estimate solar savings, ROI, and payback period                   |
-| 🧠 **AI Recommendations**   | Suggests optimal panel configurations using ML + weather APIs               |
-| 📄 **Report Generation**    | Users can download detailed, personalized solar savings reports (PDF)       |
-| 📊 **User Dashboard**       | Access saved reports, view analytics, and update data                      |
-| 🌦️ **Real-time Weather Data** | Integrates with OpenWeatherMap/Solcast to improve forecast accuracy        |
-| 🔐 **Secure Authentication**| Role-based login for homeowners, installers, and admins                     |
-| 🔌 **Installer API Portal** | Solar partners can access API tools to better serve their clients          |
+| **Savings Calculator**   | Instantly estimate solar savings, ROI, and payback period                   |
+| **AI Recommendations**   | Suggests optimal panel configurations using ML + weather APIs               |
+| **Report Generation**    | Users can download detailed, personalized solar savings reports (PDF)       |
+| **User Dashboard**       | Access saved reports, view analytics, and update data                      |
+| **Real-time Weather Data** | Integrates with OpenWeatherMap/Solcast to improve forecast accuracy        |
+| **Secure Authentication**| Role-based login for homeowners, installers, and admins                     |
+| **Installer API Portal** | Solar partners can access API tools to better serve their clients          |
 
 ---
 
@@ -40,7 +40,7 @@ Built with a mobile-first design and SaaS-ready architecture, SolarIntelli helps
 
 ---
 
-## 📦 Local Setup
+## Local Setup
 
 > Clone and run the app locally:
 
