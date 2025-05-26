@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 import Dashboard from './pages/Dashboard';
 import ReportViewer from './pages/ReportViewer';
+import InstallerPortal from './pages/InstallerPortal';
 import Profile from './pages/Profile';
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
         <Route
           path="/reports/:id"
           element={isAuthenticated ? <ReportViewer /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/installer"
+          element={isAuthenticated ? <InstallerPortal /> : <Navigate to="/login" />}
         />
         <Route
           path="/profile"
