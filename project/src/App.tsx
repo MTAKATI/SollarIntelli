@@ -12,7 +12,7 @@ import Dashboard from './pages/Dashboard';
 
 function App() {
   // For demo purposes, let's assume user is logged in
-  const [isLoggedIn] = useState(false);
+  const [isLoggedIn] = useState(true);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
