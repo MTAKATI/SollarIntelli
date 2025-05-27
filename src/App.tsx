@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useAuthStore } from './store/authStore';
+import ProtectedRoute from './components/ProtectedRoute';
 import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -8,10 +9,9 @@ import Dashboard from './pages/Dashboard';
 import ReportViewer from './pages/ReportViewer';
 import InstallerPortal from './pages/InstallerPortal';
 import Profile from './pages/Profile';
+import AdminPortal from './pages/AdminPortal';
 
 function App() {
-  const { isAuthenticated } = useAuthStore();
-
   return (
     <Router>
       <Routes>
@@ -24,19 +24,43 @@ function App() {
         {/* Protected Routes */}
         <Route
           path="/dashboard"
-          element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/reports/:id"
-          element={isAuthenticated ? <ReportViewer /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute>
+              <ReportViewer />
+            </ProtectedRoute>
+          }
         />
         <Route
-          path="/installer"
-          element={isAuthenticated ? <InstallerPortal /> : <Navigate to="/login" />}
+          path="/installer/*"
+          element={
+            <ProtectedRoute roles={['installer']}>
+              <InstallerPortal />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/*"
+          element={
+            <ProtectedRoute roles={['admin']}>
+              <AdminPortal />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/profile"
-          element={isAuthenticated ? <Profile /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </Router>
